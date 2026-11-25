@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — ScholarFinder AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-dashboard">
+  <!-- Header / Navbar -->
+  <header class="navbar no-print" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand" aria-label="ScholarFinder AI Home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </span>
+        <span class="brand-text">ScholarFinder <span class="brand-accent">AI</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Dashboard Navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="dashboard.html" class="nav-link active" data-i18n="nav.dashboard">Dashboard</a>
+        <button type="button" class="nav-link-btn" id="openDatasetModalBtn" data-i18n="dash.importCsv">Import CSV</button>
+        <button type="button" class="nav-link-btn" id="openProfileModalBtn" data-i18n="dash.editProfile">Edit Profile</button>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="openRemindersBtn" title="Deadline Reminders" aria-label="Deadline Reminders">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <span class="icon-badge" id="reminderCountBadge" hidden>0</span>
+        </button>
+
+        <button type="button" class="icon-btn" id="openSettingsBtn" title="AI & Backend Settings" aria-label="AI and Backend Settings">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+        </button>
+
+        <div class="lang-switch" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="bn">বাংলা</button>
+        </div>
+
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <div class="container mobile-drawer-inner">
+        <a href="index.html" class="mobile-nav-link" data-i18n="nav.home">Home</a>
+        <a href="dashboard.html" class="mobile-nav-link active" data-i18n="nav.dashboard">Dashboard</a>
+        <button type="button" class="mobile-nav-btn" id="mobileDatasetBtn" data-i18n="dash.importCsv">Import CSV</button>
+        <button type="button" class="mobile-nav-btn" id="mobileProfileBtn" data-i18n="dash.editProfile">Edit Profile</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-main container">
+    <!-- Print Report Header (only visible when printing) -->
+    <div class="print-only print-header">
+      <h1>ScholarFinder AI — Scholarship Eligibility Report</h1>
+      <p id="printReportMeta"></p>
+    </div>
+
+    <!-- Deadline Reminder Banner -->
+    <div class="reminder-banner no-print" id="deadlineReminderBanner" hidden>
+      <div class="reminder-banner-content">
+        <span class="reminder-icon" aria-hidden="true">⏰</span>
+        <div id="deadlineReminderText"></div>
+      </div>
+      <div class="reminder-banner-actions">
+        <button type="button" class="btn btn-sm btn-outline" id="viewUrgentBtn" data-i18n="dash.viewUrgent">View Upcoming</button>
+        <button type="button" class="btn btn-sm btn-ghost" id="dismissReminderBtn" aria-label="Dismiss">✕</button>
+      </div>
+    </div>
+
+    <!-- Top Context Bar: Student Summary + Dataset Status -->
+    <section class="context-ribbon card">
+      <div class="context-col">
+        <div class="context-label" data-i18n="dash.studentSummary">Student Profile</div>
+        <div class="context-main" id="dashProfileSummary">
+          <span data-i18n="dash.noProfileYet">No student profile saved yet.</span>
+        </div>
+      </div>
+      <div class="context-col">
+        <div class="context-label" data-i18n="dash.datasetSummary">Active Dataset</div>
+        <div class="context-main" id="dashDatasetSummary">
+          <span data-i18n="dash.noDatasetYet">No CSV dataset loaded.</span>
+        </div>
+      </div>
+      <div class="context-actions no-print">
+        <button type="button" class="btn btn-sm btn-outline" id="ribbonEditProfileBtn" data-i18n="dash.editProfile">Edit Profile</button>
+        <button type="button" class="btn btn-sm btn-outline" id="ribbonImportCsvBtn" data-i18n="dash.changeDataset">Load / Change CSV</button>
+      </div>
+    </section>
+
+    <!-- KPI Cards -->
+    <section class="kpi-grid" aria-label="Scholarship Metrics">
+      <div class="kpi-card">
+        <div class="kpi-top">
+          <span class="kpi-label" data-i18n="kpi.total">Total Scholarships</span>
+          <span class="kpi-icon kpi-blue">Σ</span>
+        </div>
+        <div class="kpi-value" id="kpiTotal">0</div>
+      </div>
+
+      <div class="kpi-card kpi-card-eligible">
+        <div class="kpi-top">
+          <span class="kpi-label" data-i18n="kpi.eligible">Eligible Scholarships</span>
+          <span class="kpi-icon kpi-green">✓</span>
+        </div>
+        <div class="kpi-value" id="kpiEligible">0</div>
+      </div>
+
+      <div class="kpi-card kpi-card-almost">
+        <div class="kpi-top">
+          <span class="kpi-label" data-i18n="kpi.almost">Almost Eligible</span>
+          <span class="kpi-icon kpi-amber">!</span>
+        </div>
+        <div class="kpi-value" id="kpiAlmost">0</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-top">
+          <span class="kpi-label" data-i18n="kpi.saved">Saved Scholarships</span>
+          <span class="kpi-icon kpi-indigo">★</span>
+        </div>
+        <div class="kpi-value" id="kpiSaved">0</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-top">
+          <span class="kpi-label" data-i18n="kpi.deadlines">Upcoming Deadlines</span>
+          <span class="kpi-icon kpi-rose">◷</span>
+        </div>
+        <div class="kpi-value" id="kpiDeadlines">0</div>
+      </div>
+    </section>
+
+    <!-- AI Recommendations Strategy Panel -->
+    <section class="card ai-strategy-panel no-print" id="aiStrategySection">
+      <div class="ai-strategy-header">
+        <div>
+          <div class="ai-badge-row">
+            <span class="badge badge-ai" id="aiEngineBadge" data-i18n="ai.checkingBadge">AI Engine</span>
+            <h2 class="ai-strategy-title" data-i18n="ai.strategyTitle">Personalized AI Scholarship Strategy</h2>
+          </div>
+          <p class="ai-strategy-sub" data-i18n="ai.strategySub">
+            Get tailored scholarship recommendations, improvement advice, and a 7-day action plan based on your real CSV matches.
+          </p>
+        </div>
+        <button type="button" class="btn btn-primary" id="generateStrategyBtn" data-i18n="ai.generateStrategy">
+          Generate AI Recommendations
+        </button>
+      </div>
+      <div class="ai-strategy-body" id="aiStrategyBody" hidden></div>
+    </section>
+
+    <!-- Controls Toolbar -->
+    <section class="toolbar card no-print" aria-label="Filter and Sort Controls">
+      <div class="category-tabs" role="tablist" id="categoryTabs">
+        <button type="button" class="tab-btn active" data-category="all" role="tab">
+          <span data-i18n="tabs.all">All</span> <span class="tab-count" id="tabCountAll">0</span>
+        </button>
+        <button type="button" class="tab-btn" data-category="eligible" role="tab">
+          <span data-i18n="tabs.eligible">Eligible</span> <span class="tab-count" id="tabCountEligible">0</span>
+        </button>
+        <button type="button" class="tab-btn" data-category="almost_eligible" role="tab">
+          <span data-i18n="tabs.almost">Almost Eligible</span> <span class="tab-count" id="tabCountAlmost">0</span>
+        </button>
+        <button type="button" class="tab-btn" data-category="not_eligible" role="tab">
+          <span data-i18n="tabs.notEligible">Not Eligible</span> <span class="tab-count" id="tabCountNot">0</span>
+        </button>
+        <button type="button" class="tab-btn" data-category="saved" role="tab">
+          <span data-i18n="tabs.saved">Saved</span> <span class="tab-count" id="tabCountSaved">0</span>
+        </button>
+      </div>
+
+      <div class="filters-row">
+        <div class="search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" id="searchInput" class="form-control" data-i18n-placeholder="dash.searchPh" placeholder="Search scholarship, provider, department..." />
+        </div>
+
+        <select id="deptFilter" class="form-control filter-select" aria-label="Filter by Department">
+          <option value="all" data-i18n="dash.allDepts">All Departments</option>
+        </select>
+
+        <select id="sortSelect" class="form-control filter-select" aria-label="Sort Scholarships">
+          <option value="match" data-i18n="sort.bestMatch">Sort: Best Match</option>
+          <option value="deadline" data-i18n="sort.deadline">Sort: Earliest Deadline</option>
+          <option value="amount" data-i18n="sort.amount">Sort: Highest Amount</option>
+          <option value="cgpa" data-i18n="sort.cgpa">Sort: Required CGPA</option>
+        </select>
+
+        <div class="toolbar-exports">
+          <button type="button" class="btn btn-outline btn-sm" id="exportCsvBtn" data-i18n="dash.exportCsv">Download CSV</button>
+          <button type="button" class="btn btn-outline btn-sm" id="printReportBtn" data-i18n="dash.printReport">Print Report</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loading Skeletons -->
+    <section class="scholarship-grid" id="skeletonGrid" hidden aria-hidden="true">
+      <div class="card skeleton-card">
+        <div class="skeleton skeleton-title"></div>
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line short"></div>
+        <div class="skeleton skeleton-box"></div>
+      </div>
+      <div class="card skeleton-card">
+        <div class="skeleton skeleton-title"></div>
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line short"></div>
+        <div class="skeleton skeleton-box"></div>
+      </div>
+      <div class="card skeleton-card">
+        <div class="skeleton skeleton-title"></div>
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line short"></div>
+        <div class="skeleton skeleton-box"></div>
+      </div>
+    </section>
+
+    <!-- Empty State: No Dataset -->
+    <section class="card empty-state" id="emptyDatasetState" hidden>
+      <div class="empty-icon">📄</div>
+      <h2 data-i18n="empty.noDatasetTitle">No Scholarship Dataset Loaded Yet</h2>
+      <p data-i18n="empty.noDatasetDesc">
+        To preserve data integrity, ScholarFinder AI never uses fake records. Please upload track3_scholarships (1).csv or connect your Google Sheets CSV export to begin matching.
+      </p>
+      <div class="btn-row justify-center">
+        <button type="button" class="btn btn-primary" id="emptyUploadCsvBtn" data-i18n="empty.uploadBtn">Upload track3_scholarships (1).csv</button>
+        <button type="button" class="btn btn-outline" id="emptySheetsHelpBtn" data-i18n="empty.sheetsBtn">Connect Google Sheets</button>
+      </div>
+    </section>
+
+    <!-- Empty State: No Profile -->
+    <section class="card empty-state" id="emptyProfileState" hidden>
+      <div class="empty-icon">🎓</div>
+      <h2 data-i18n="empty.noProfileTitle">Complete Your Student Profile</h2>
+      <p data-i18n="empty.noProfileDesc">
+        Your dataset is loaded! Enter your CGPA, department, semester, and financial support details to calculate Eligible and Almost Eligible scholarships.
+      </p>
+      <div class="btn-row justify-center">
+        <button type="button" class="btn btn-primary" id="emptyCreateProfileBtn" data-i18n="empty.createProfileBtn">Set Up Student Profile</button>
+      </div>
+    </section>
+
+    <!-- Empty State: No Search Results -->
+    <section class="card empty-state" id="emptyFilterState" hidden>
+      <div class="empty-icon">🔍</div>
+      <h2 data-i18n="empty.noMatchTitle">No Scholarships Match These Filters</h2>
+      <p data-i18n="empty.noMatchDesc">Try clearing your search query, switching tabs, or selecting All Departments.</p>
+      <div class="btn-row justify-center">
+        <button type="button" class="btn btn-outline" id="clearFiltersBtn" data-i18n="empty.clearFilters">Clear Filters</button>
+      </div>
+    </section>
+
+    <!-- Scholarship Cards Container -->
+    <section class="scholarship-grid" id="scholarshipGrid" aria-live="polite"></section>
+  </main>
+
+  <!-- Modal: Scholarship Details, AI Guide & Checklist -->
+  <div class="modal-backdrop" id="detailsModal" hidden role="dialog" aria-modal="true" aria-labelledby="detailsModalTitle">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <div>
+          <span class="badge" id="detailsModalStatusBadge">-</span>
+          <h2 class="modal-title" id="detailsModalTitle">Scholarship Details</h2>
+          <p class="modal-subtitle" id="detailsModalProvider"></p>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="detailsModal" aria-label="Close">✕</button>
+      </div>
+
+      <div class="modal-body" id="detailsModalBody">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Edit Student Profile -->
+  <div class="modal-backdrop" id="profileModal" hidden role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="profileModalTitle" data-i18n="dash.editProfile">Edit Student Profile</h2>
+        <button type="button" class="modal-close" data-close-modal="profileModal" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="modalProfileForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="mFullName"><span data-i18n="form.fullName">Full Name</span> <span class="req">*</span></label>
+              <input type="text" id="mFullName" class="form-control" required />
+              <span class="field-error" id="mErr-fullName"></span>
+            </div>
+            <div class="form-group">
+              <label for="mUniversity"><span data-i18n="form.university">University</span> <span class="req">*</span></label>
+              <input type="text" id="mUniversity" class="form-control" required />
+              <span class="field-error" id="mErr-university"></span>
+            </div>
+            <div class="form-group">
+              <label for="mDepartmentSelect"><span data-i18n="form.department">Department</span> <span class="req">*</span></label>
+              <select id="mDepartmentSelect" class="form-control" required>
+                <option value="" data-i18n="form.selectDept">Select department...</option>
+                <option value="CSE">Computer Science & Engineering (CSE)</option>
+                <option value="EEE">Electrical & Electronic Engineering (EEE)</option>
+                <option value="SWE">Software Engineering (SWE)</option>
+                <option value="IT">Information Technology (IT)</option>
+                <option value="CE">Civil Engineering (CE)</option>
+                <option value="ME">Mechanical Engineering (ME)</option>
+                <option value="BBA">Business Administration (BBA)</option>
+                <option value="Economics">Economics</option>
+                <option value="English">English</option>
+                <option value="Pharmacy">Pharmacy</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="Other" data-i18n="form.otherDept">Other (Specify)</option>
+              </select>
+              <input type="text" id="mDepartmentCustom" class="form-control mt-sm" hidden />
+              <span class="field-error" id="mErr-department"></span>
+            </div>
+            <div class="form-group">
+              <label for="mCgpa"><span data-i18n="form.cgpa">CGPA (out of 4.00)</span> <span class="req">*</span></label>
+              <input type="number" id="mCgpa" class="form-control" min="0" max="4" step="0.01" required />
+              <span class="field-error" id="mErr-cgpa"></span>
+            </div>
+            <div class="form-group">
+              <label for="mSemester"><span data-i18n="form.semester">Current Semester</span> <span class="req">*</span></label>
+              <select id="mSemester" class="form-control" required>
+                <option value="" data-i18n="form.selectSemester">Select semester...</option>
+                <option value="1">1st Semester (Year 1)</option>
+                <option value="2">2nd Semester (Year 1)</option>
+                <option value="3">3rd Semester (Year 2)</option>
+                <option value="4">4th Semester (Year 2)</option>
+                <option value="5">5th Semester (Year 3)</option>
+                <option value="6">6th Semester (Year 3)</option>
+                <option value="7">7th Semester (Year 4)</option>
+                <option value="8">8th Semester (Year 4)</option>
+                <option value="9">9th Semester / Final</option>
+                <option value="10">10th+ Semester</option>
+                <option value="Graduate">Graduate / Masters</option>
+              </select>
+              <span class="field-error" id="mErr-semester"></span>
+            </div>
+            <div class="form-group">
+              <label for="mFinancialSupport"><span data-i18n="form.financialSupport">Financial Support Required</span> <span class="req">*</span></label>
+              <select id="mFinancialSupport" class="form-control" required>
+                <option value="" data-i18n="form.selectFinancial">Select financial support need...</option>
+                <option value="Full" data-i18n="form.finFull">Yes — Full Financial Support Required</option>
+                <option value="Partial" data-i18n="form.finPartial">Yes — Partial Financial Support Required</option>
+                <option value="No" data-i18n="form.finNo">No — Merit-Based / Not Required</option>
+              </select>
+              <span class="field-error" id="mErr-financialSupport"></span>
+            </div>
+            <div class="form-group">
+              <label for="mCountrySelect"><span data-i18n="form.country">Country</span> <span class="req">*</span></label>
+              <select id="mCountrySelect" class="form-control" required>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="India">India</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Canada">Canada</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Other" data-i18n="form.otherCountry">Other (Specify)</option>
+              </select>
+              <input type="text" id="mCountryCustom" class="form-control mt-sm" hidden />
+              <span class="field-error" id="mErr-country"></span>
+            </div>
+            <div class="form-group">
+              <label for="mGender" data-i18n="form.gender">Gender (for gender-specific scholarships)</label>
+              <select id="mGender" class="form-control">
+                <option value="Unspecified" data-i18n="form.genderAny">Prefer not to say / Any</option>
+                <option value="Female" data-i18n="form.genderFemale">Female</option>
+                <option value="Male" data-i18n="form.genderMale">Male</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mEmail" data-i18n="form.email">Email (Optional)</label>
+              <input type="email" id="mEmail" class="form-control" />
+              <span class="field-error" id="mErr-email"></span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ghost" data-close-modal="profileModal" data-i18n="common.cancel">Cancel</button>
+            <button type="submit" class="btn btn-primary" data-i18n="dash.saveProfileBtn">Save & Recalculate Matches</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Import CSV / Google Sheets -->
+  <div class="modal-backdrop" id="datasetModal" hidden role="dialog" aria-modal="true" aria-labelledby="datasetModalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="datasetModalTitle" data-i18n="dataset.title">Load Your Scholarship Dataset</h2>
+        <button type="button" class="modal-close" data-close-modal="datasetModal" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <label class="dropzone" id="dashCsvDropzone" for="dashCsvFileInput">
+          <input type="file" id="dashCsvFileInput" accept=".csv,text/csv" hidden />
+          <div class="dropzone-title" data-i18n="dataset.dropTitle">Drag & drop your CSV file here, or click to browse</div>
+          <div class="dropzone-hint" data-i18n="dataset.dropHint">Recommended: track3_scholarships (1).csv</div>
+        </label>
+
+        <div class="form-group mt-md">
+          <label for="dashSheetUrlInput" data-i18n="dataset.sheetsUrlLabel">Google Sheet URL</label>
+          <div class="input-action-row">
+            <input type="url" id="dashSheetUrlInput" class="form-control" value="https://docs.google.com/spreadsheets/d/1maevjSKmNVUyjKEmMQRBXs10oVJdM6-y_IGe2UL7pv8/edit?usp=sharing" />
+            <button type="button" class="btn btn-secondary" id="dashFetchSheetBtn" data-i18n="dataset.sheetsLoadBtn">Fetch</button>
+          </div>
+        </div>
+
+        <div class="info-callout mt-md">
+          <strong data-i18n="dataset.exportGuideTitle">How to export a private Google Sheet as CSV:</strong>
+          <ol class="compact-list">
+            <li data-i18n="dataset.exportStep1">Open the Google Sheet in your browser while signed in.</li>
+            <li data-i18n="dataset.exportStep2">Click File → Download → Comma Separated Values (.csv).</li>
+            <li data-i18n="dataset.exportStep3">Upload the downloaded .csv file above.</li>
+          </ol>
+        </div>
+
+        <div id="dashDatasetDiagnostics" class="dataset-status-box mt-md" hidden></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Deadline Reminders -->
+  <div class="modal-backdrop" id="remindersModal" hidden role="dialog" aria-modal="true" aria-labelledby="remindersModalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="remindersModalTitle" data-i18n="reminders.title">Deadline Reminders</h2>
+        <button type="button" class="modal-close" data-close-modal="remindersModal" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="reminderDaysSelect" data-i18n="reminders.windowLabel">Alert me for deadlines within:</label>
+          <select id="reminderDaysSelect" class="form-control">
+            <option value="7">7 days</option>
+            <option value="14">14 days</option>
+            <option value="30">30 days</option>
+            <option value="60">60 days</option>
+          </select>
+        </div>
+        <div id="remindersListContainer" class="reminders-list mt-md"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Backend & AI Settings -->
+  <div class="modal-backdrop" id="settingsModal" hidden role="dialog" aria-modal="true" aria-labelledby="settingsModalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="settingsModalTitle" data-i18n="settings.title">Backend & AI Connection Settings</h2>
+        <button type="button" class="modal-close" data-close-modal="settingsModal" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="card-subtext" data-i18n="settings.desc">
+          Configure your Express backend URL (for example http://localhost:5000 locally or your free Render backend URL when deployed on GitHub Pages).
+        </p>
+        <div class="form-group">
+          <label for="backendUrlInput" data-i18n="settings.backendLabel">Backend API Base URL</label>
+          <input type="url" id="backendUrlInput" class="form-control" placeholder="http://localhost:5000" />
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="saveSettingsBtn" data-i18n="settings.saveBtn">Save & Test Connection</button>
+          <button type="button" class="btn btn-outline" id="clearAllDataBtn" data-i18n="settings.clearAllBtn">Clear Local Data</button>
+        </div>
+        <div class="status-pill-row mt-md" id="backendTestResult"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container no-print" id="toastContainer" aria-live="polite"></div>
+
+  <script src="js/language.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/bundledDataset.js"></script>
+  <script src="js/csvLoader.js"></script>
+  <script src="js/matching.js"></script>
+  <script src="js/scholarship.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

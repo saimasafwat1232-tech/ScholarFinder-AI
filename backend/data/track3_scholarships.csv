@@ -1,0 +1,137 @@
+id,name,provider,min_cgpa,department,need_based,gender,amount_bdt,deadline,description
+1,Merit Excellence Award,Bayview University,3.8,All,no,All,30000,2027-02-15,For students with outstanding CGPA. Renewable every semester if CGPA stays above 3.80.
+2,Future Engineer Scholarship,Tech Foundation BD,3.5,CSE;EEE;CE,no,All,40000,2027-03-10,For engineering students who show interest in research or projects.
+3,Coders of Tomorrow Grant,Digital Bangladesh Trust,3.2,CSE,no,All,25000,2027-02-28,For CSE students who have built at least one software project.
+4,Need-Based Tuition Support,Bayview University,2.5,All,yes,All,20000,2027-01-31,Partial tuition support for students from low-income families.
+5,Women in Tech Scholarship,Women Leaders Network,3.0,CSE;EEE,no,Female,35000,2027-03-20,For female students studying computer science or electrical engineering.
+6,Business Leaders Award,Chattogram Business Forum,3.4,BBA,no,All,30000,2027-04-05,For BBA students with leadership experience in clubs or events.
+7,Literature and Language Prize,Language Society BD,3.3,English,no,All,20000,2027-03-01,For English department students with strong writing or public speaking skills.
+8,Green Infrastructure Grant,Civil Builders Association,3.0,CE,no,All,30000,2027-04-15,For civil engineering students working on sustainable building ideas.
+9,First Generation Learner Scholarship,Education for All Foundation,2.8,All,yes,All,25000,2027-02-20,For students who are the first in their family to attend university.
+10,Sports Excellence Scholarship,Bayview University,2.5,All,no,All,15000,2027-03-25,For students who represented the university in sports competitions.
+11,Rural Student Support Fund,Village Education Trust,2.7,All,yes,All,22000,2027-05-01,For students from rural areas with financial need.
+12,Power Systems Scholarship,National Energy Society,3.5,EEE,no,All,35000,2027-03-30,For EEE students interested in power and renewable energy.
+13,Startup Spark Award,Young Entrepreneurs Club,3.0,BBA;CSE,no,All,20000,2027-04-20,For students with a startup idea or a small running business.
+14,Community Volunteer Scholarship,Helping Hands BD,2.6,All,no,All,12000,2027-05-10,For students with at least 100 hours of volunteer work in one year.
+15,Top Rank Honors Scholarship,Bayview University,3.9,All,no,All,50000,2027-01-25,For the top 5 students of each department by CGPA.
+16,Emergency Hardship Fund,Bayview University,2.0,All,yes,All,18000,2027-12-31,For students facing sudden financial difficulty. Applications are open all year.
+17,Youth Voice Scholarship,Young Entrepreneurs Club,3.0,All,yes,All,19000,2027-07-30,For students who speak up on youth and education issues.
+18,Disability Inclusion Support,Teesta Education Society,2.6,All,no,All,30000,2027-11-16,For students with a disability to support learning needs and study costs.
+19,Embedded Systems Grant,Sundarban Youth Trust,3.3,EEE,no,All,32000,2027-02-14,For EEE students who have worked on an electronics or power project.
+20,Marketing Talent Award,Education for All Foundation,3.5,BBA,no,All,35000,2027-08-11,For BBA students who have a small business or startup idea.
+21,Student Journalist Award,National Energy Society,3.0,All,no,All,30000,2027-09-07,"For students who write for a campus magazine, newspaper or news page."
+22,Girls Education Support Fund,Rupsha Industries Welfare Fund,2.7,All,yes,Female,23000,2027-04-17,Helps female students continue studies despite financial problems.
+23,Bright Future Need Grant,Sundarban Youth Trust,2.8,All,yes,All,28000,2027-07-10,Helps with tuition fee and books for students with proven financial need.
+24,Research Starter Scholarship,Padma Education Trust,3.6,CSE;EEE,no,All,39000,2027-08-15,For CSE and EEE students who want to start research or join a lab.
+25,Women in Engineering Award,Hilltop Alumni Network,3.2,All,no,Female,37000,2027-10-17,Supports female students who want to build a career in their field.
+26,Robotics Learners Award,Teesta Education Society,3.7,EEE,no,All,24000,2027-04-22,For EEE students interested in renewable energy or embedded systems.
+27,Debate Champions Scholarship,Coastal Bank Foundation,2.8,All,no,All,26000,2027-06-03,For students who win or take part in debate competitions.
+28,Web Developer Scholarship,Surma Learning Foundation,3.0,CSE,no,All,37000,2027-04-26,Supports CSE students who want to learn modern software skills.
+29,Books and Fees Support,Bright Minds Trust,2.9,All,yes,All,19000,2027-10-09,Helps with tuition fee and books for students with proven financial need.
+30,Girls in STEM Grant,Helping Hands BD,2.9,All,no,Female,36000,2027-02-05,Supports female students who want to build a career in their field.
+31,Safe Buildings Scholarship,Education for All Foundation,2.9,CE,no,All,37000,2027-04-04,"For CE students working on roads, bridges or water projects."
+32,Entrepreneurship Scholarship,Civil Builders Association,3.4,BBA,no,All,19000,2027-08-26,For BBA students with leadership experience in clubs or events.
+33,National Business Scholarship,Sundarban Youth Trust,3.1,BBA,no,All,32000,2027-08-15,For BBA students who have a small business or startup idea.
+34,Chattogram Need-Based Support,Chattogram Business Forum,2.9,All,yes,All,21000,2027-02-27,Partial support for students facing financial difficulty.
+35,Bengal Need-Based Support,Hilltop Alumni Network,2.5,All,yes,All,20000,2027-01-28,For students from low-income families who need help with tuition.
+36,Teesta Coding Scholarship,Rupsha Industries Welfare Fund,3.1,CSE,no,All,21000,2027-08-09,For CSE students with a public GitHub profile showing real project work.
+37,Data Science Starter Grant,Coastal Bank Foundation,3.4,CSE,no,All,40000,2027-11-27,For CSE students with a public GitHub profile showing real project work.
+38,Rupsha Tech Entrepreneur Grant,Digital Bangladesh Trust,3.6,BBA;CSE,no,All,30000,2027-02-04,For BBA and CSE students who want to build a tech startup.
+39,Language Need-Based Support,Helping Hands BD,2.9,All,yes,All,30000,2027-06-11,Helps with tuition fee and books for students with proven financial need.
+40,Low-Income Student Award,Hilltop Alumni Network,2.9,All,yes,All,28000,2027-11-16,For hardworking students who may leave studies because of money problems.
+41,Banking Careers Award,Bengal Future Fund,3.0,BBA,no,All,23000,2027-07-04,Supports BBA students who join business case competitions.
+42,Bayview Electronics Scholarship,Meghna Scholars Society,3.1,EEE,no,All,22000,2027-10-17,For EEE students who have worked on an electronics or power project.
+43,Port Civil Engineering Grant,Chattogram Business Forum,3.6,CE,no,All,21000,2027-07-23,For CE students who want to work on flood and cyclone resilient buildings.
+44,National Women Leaders Scholarship,Hilltop Alumni Network,3.4,All,no,Female,33000,2027-10-26,For female students with good academic results and leadership potential.
+45,Shonar Writing Scholarship,Shonar Bangla Trust,2.9,English,no,All,27000,2027-08-20,"For English students with strong writing, poetry or story skills."
+46,Bright Need-Based Support,Hilltop Alumni Network,2.1,All,yes,All,18000,2027-12-01,Partial support for students facing financial difficulty.
+47,Clean Campus Award,Bayview University,3.2,All,no,All,11000,2027-09-26,For students who help keep the campus clean and organized.
+48,Bright Business Scholarship,Bengal Future Fund,3.5,BBA,no,All,28000,2027-08-26,For BBA students with leadership experience in clubs or events.
+49,Young Engineering Merit Award,Shapla Foundation,3.5,CSE;EEE;CE,no,All,31000,2027-09-04,For engineering students who want to continue with higher studies.
+50,Water Resource Scholarship,Port City Rotary Friends,3.4,CE,no,All,37000,2027-01-19,For civil engineering students interested in safe and low-cost housing.
+51,Mobile App Maker Award,Karnaphuli Alumni Association,3.2,CSE,no,All,31000,2027-07-15,"For CSE students interested in artificial intelligence, data or web development."
+52,Shonar STEM Scholarship,Green Delta Care Fund,3.5,CSE;EEE,no,All,40000,2027-01-18,For students who won or joined a hackathon or science fair.
+53,CGPA Champions Award,Surma Learning Foundation,3.6,All,no,All,15000,2027-06-08,For students who improved their CGPA every semester.
+54,Scholars of the Year,National Energy Society,3.7,All,no,All,50000,2027-03-30,Rewards consistent academic performance.
+55,AI Learners Grant,Hilltop Alumni Network,3.3,CSE,no,All,25000,2027-09-08,Supports CSE students who want to learn modern software skills.
+56,Disaster Resilience Scholarship,Bright Minds Trust,3.6,CE,no,All,20000,2027-10-25,"For CE students working on roads, bridges or water projects."
+57,Port Need-Based Support,Coastal Bank Foundation,2.2,All,yes,All,20000,2027-02-07,For students from low-income families who need help with tuition.
+58,Community Service Award,Bright Minds Trust,2.9,All,no,All,29000,2027-05-18,Recognizes students who lead service projects for their community.
+59,Linguistics Learners Award,Shonar Bangla Trust,3.5,English,no,All,24000,2027-09-30,For English students who take part in debate or public speaking.
+60,Green Communication Scholarship,Bayview University,3.2,BBA;English,no,All,24000,2027-07-26,For students who lead a student club or magazine.
+61,Rural Students Fund,Shapla Foundation,3.2,All,no,All,21000,2027-06-15,Supports students from rural areas who study away from home.
+62,Cyber Safety Scholarship,Civil Builders Association,3.5,CSE,no,All,23000,2027-03-03,Supports CSE students who want to learn modern software skills.
+63,Student Leader Scholarship,Shapla Foundation,2.3,All,no,All,18000,2027-03-19,For students who lead a student club or society.
+64,Creative Writing Scholarship,Young Entrepreneurs Club,3.1,English,no,All,28000,2027-12-07,For English students who take part in debate or public speaking.
+65,Daughters of Bangladesh Scholarship,Bengal Future Fund,3.5,All,no,Female,21000,2027-08-24,Supports female students who want to build a career in their field.
+66,Future Engineers Grant,Coastal Bank Foundation,3.3,CSE;EEE;CE,no,All,37000,2027-11-14,Supports engineering students who join technical competitions.
+67,Engineering Excellence Scholarship,Shapla Foundation,3.5,CSE;EEE;CE,no,All,49000,2027-08-18,For engineering students who want to continue with higher studies.
+68,Renewable Energy Scholarship,Civil Builders Association,3.5,EEE,no,All,27000,2027-05-30,For EEE students interested in renewable energy or embedded systems.
+69,Smart Grid Scholarship,Surma Learning Foundation,3.2,EEE,no,All,21000,2027-10-02,For EEE students who have worked on an electronics or power project.
+70,Shapla STEM Scholarship,Padma Education Trust,3.7,CSE;EEE,no,All,37000,2027-04-09,For students who won or joined a hackathon or science fair.
+71,Helping Business Scholarship,Surma Learning Foundation,3.5,BBA,no,All,20000,2027-05-15,For BBA students with strong results in accounting or finance courses.
+72,Women in Business Award,Teesta Education Society,3.3,All,no,Female,20000,2027-10-01,For female students from any department who show strong effort.
+73,Innovation Lab Grant,Young Entrepreneurs Club,3.4,CSE;EEE,no,All,35000,2027-10-18,For CSE and EEE students who want to start research or join a lab.
+74,Leadership Voices Grant,Digital Bangladesh Trust,3.4,BBA;English,no,All,25000,2027-05-19,For BBA and English students with strong communication skills.
+75,Dean's Honor Scholarship,Tech Foundation BD,3.5,All,no,All,47000,2027-11-13,Rewards consistent academic performance.
+76,Circuit Makers Award,Green Delta Care Fund,3.0,EEE,no,All,30000,2027-02-13,For EEE students who have worked on an electronics or power project.
+77,Open Source Contributor Award,Young Entrepreneurs Club,3.0,CSE,no,All,43000,2027-09-07,For CSE students who have built a software project or joined a programming contest.
+78,Science and Technology Award,National Energy Society,3.5,CSE;EEE,no,All,29000,2027-05-04,For CSE and EEE students who want to start research or join a lab.
+79,Startup Founders Award,Education for All Foundation,3.4,BBA;CSE,no,All,23000,2027-09-10,For students working on a small online business.
+80,Blood Donor Society Grant,Coastal Bank Foundation,2.5,All,no,All,12000,2027-07-10,For students who are regular volunteer blood donors.
+81,Engineering Need Support Grant,Digital Bangladesh Trust,3.0,CSE;EEE;CE,yes,All,28000,2027-06-29,For engineering students with financial need and good effort.
+82,Bright Merit Scholarship,Digital Bangladesh Trust,3.5,All,no,All,33000,2027-05-11,For students who improved their CGPA every semester.
+83,Teesta Business Scholarship,Padma Education Trust,3.5,BBA,no,All,21000,2027-06-17,For BBA students with strong results in accounting or finance courses.
+84,National Electronics Scholarship,Karnaphuli Alumni Association,3.4,EEE,no,All,25000,2027-08-27,Supports EEE students who join robotics or hardware competitions.
+85,Padma Civil Engineering Grant,Shonar Bangla Trust,3.0,CE,no,All,28000,2027-04-07,For CE students who want to work on flood and cyclone resilient buildings.
+86,Algorithm Champions Award,Bayview University,3.2,CSE,no,All,42000,2027-08-19,For CSE students with a public GitHub profile showing real project work.
+87,Study Without Worry Fund,Hilltop Alumni Network,2.3,All,yes,All,22000,2027-03-17,Partial support for students facing financial difficulty.
+88,Teaching English Scholarship,Shapla Foundation,3.5,English,no,All,21000,2027-05-19,"For English students with strong writing, poetry or story skills."
+89,Public Speaking Award,Surma Learning Foundation,3.5,English,no,All,15000,2027-10-27,"For English students with strong writing, poetry or story skills."
+90,Tech Student Hardship Fund,Bayview University,3.2,CSE;EEE;CE,yes,All,33000,2027-02-11,For engineering students with financial need and good effort.
+91,Coastal Area Students Grant,Meghna Scholars Society,3.3,All,yes,All,10000,2027-09-17,For students from coastal areas with difficult travel and study conditions.
+92,Rising Star Scholarship,Shonar Bangla Trust,3.7,All,no,All,43000,2027-02-10,For students with strong CGPA from any department.
+93,Haor Region Students Fund,Bright Minds Trust,2.6,All,yes,All,30000,2027-12-06,For students from haor (wetland) areas.
+94,First Generation Learner Grant,Surma Learning Foundation,2.9,All,no,All,28000,2027-04-17,For students who are the first in their family to attend university.
+95,Urban Planning Grant,Young Entrepreneurs Club,2.8,CE,no,All,22000,2027-12-05,"For CE students working on roads, bridges or water projects."
+96,Environment Protector Award,Helping Hands BD,3.4,All,yes,All,20000,2027-09-11,"For students who work on tree planting, clean-up or recycling projects."
+97,Education Coding Scholarship,Chattogram Business Forum,3.2,CSE,no,All,45000,2027-08-19,For CSE students who have built a software project or joined a programming contest.
+98,Bright Electronics Scholarship,Digital Bangladesh Trust,3.6,EEE,no,All,38000,2027-10-31,Supports EEE students who join robotics or hardware competitions.
+99,Female Student Need Grant,Padma Education Trust,2.6,All,yes,Female,30000,2027-06-11,Helps female students continue studies despite financial problems.
+100,Volunteer Hero Scholarship,Education for All Foundation,3.3,All,no,All,13000,2027-04-10,For students with regular volunteer work in the community.
+101,Helping Hand Tuition Fund,Karnaphuli Alumni Association,2.7,All,yes,All,20000,2027-06-20,For hardworking students who may leave studies because of money problems.
+102,Digital Engineering Merit Award,Rupsha Industries Welfare Fund,3.6,CSE;EEE;CE,no,All,29000,2027-09-08,For engineering students with strong CGPA and a good project record.
+103,Coastal Merit Scholarship,Bengal Future Fund,3.4,All,no,All,29000,2027-03-14,Rewards consistent academic performance.
+104,Music and Arts Scholarship,Karnaphuli Alumni Association,2.6,All,yes,All,30000,2027-11-28,"For students with talent in music, painting or other arts."
+105,Hope Scholarship,Education for All Foundation,2.1,All,yes,All,24000,2027-09-23,For students from low-income families who need help with tuition.
+106,Meghna Writing Scholarship,Chattogram Business Forum,3.5,English,no,All,25000,2027-10-13,For English students who want to become teachers or translators.
+107,Bridge and Road Award,Civil Builders Association,3.3,CE,no,All,26000,2027-12-05,"For CE students working on roads, bridges or water projects."
+108,Consistent Performer Award,Chattogram Business Forum,3.6,All,no,All,43000,2027-09-20,For students with strong CGPA from any department.
+109,Media and Business Award,Bright Minds Trust,3.4,BBA;English,no,All,16000,2027-04-08,For students who lead a student club or magazine.
+110,Photography and Media Grant,Young Entrepreneurs Club,2.3,All,yes,All,21000,2027-08-30,"For students with strong photography, video or media work."
+111,Software Builders Award,Hilltop Alumni Network,3.4,CSE,no,All,27000,2027-05-09,"For CSE students interested in artificial intelligence, data or web development."
+112,Hackathon Winners Award,Rupsha Industries Welfare Fund,3.3,CSE;EEE,no,All,33000,2027-08-28,For CSE and EEE students who want to start research or join a lab.
+113,Sundarban Women Leaders Scholarship,Padma Education Trust,3.0,All,no,Female,33000,2027-05-03,Supports female students who want to build a career in their field.
+114,Rupsha Coding Scholarship,Coastal Bank Foundation,3.0,CSE,no,All,22000,2027-05-16,"For CSE students interested in artificial intelligence, data or web development."
+115,Shonar Need-Based Support,Teesta Education Society,2.4,All,yes,All,30000,2027-02-04,Partial support for students facing financial difficulty.
+116,Accounting Excellence Award,Teesta Education Society,3.5,BBA,no,All,18000,2027-03-15,For BBA students with strong results in accounting or finance courses.
+117,Supply Chain Scholarship,Shapla Foundation,3.5,BBA,no,All,26000,2027-02-19,For BBA students with strong results in accounting or finance courses.
+118,Family Income Support Grant,Helping Hands BD,2.3,All,yes,All,23000,2027-04-16,For hardworking students who may leave studies because of money problems.
+119,Digital Women Leaders Scholarship,Helping Hands BD,3.1,All,no,Female,30000,2027-05-19,Supports female students who want to build a career in their field.
+120,Sports Talent Scholarship,Padma Education Trust,2.3,All,no,All,19000,2027-07-25,For students who play sports for the university or a district team.
+121,Her Future Grant,Young Entrepreneurs Club,3.5,All,no,Female,25000,2027-09-09,For female students from any department who show strong effort.
+122,Rupsha Merit Scholarship,Bright Minds Trust,3.5,All,no,All,25000,2027-06-23,For students who improved their CGPA every semester.
+123,Hilltop Coding Scholarship,Hilltop Alumni Network,3.4,CSE,no,All,36000,2027-04-16,For CSE students who have built a software project or joined a programming contest.
+124,Freedom Fighter Descendant Support,Language Society BD,2.7,All,yes,All,11000,2027-08-18,For children or grandchildren of freedom fighters.
+125,National Coding Scholarship,Tech Foundation BD,3.5,CSE,no,All,32000,2027-06-01,For CSE students who have built a software project or joined a programming contest.
+126,Finance Learners Grant,Port City Rotary Friends,3.1,BBA,no,All,30000,2027-02-03,Supports BBA students who join business case competitions.
+127,Civil Tech Entrepreneur Grant,Bayview University,3.4,BBA;CSE,no,All,22000,2027-05-17,For BBA and CSE students who want to build a tech startup.
+128,Daughters Tuition Support,Digital Bangladesh Trust,2.7,All,yes,Female,26000,2027-08-12,Helps female students continue studies despite financial problems.
+129,Hill Tracts Students Scholarship,Education for All Foundation,2.6,All,yes,All,27000,2027-08-01,For students from the Chattogram Hill Tracts region.
+130,Tuition Help Scholarship,Shonar Bangla Trust,2.7,All,yes,All,15000,2027-01-21,For hardworking students who may leave studies because of money problems.
+131,Sundarban Engineering Merit Award,Bayview University,3.8,CSE;EEE;CE,no,All,42000,2027-02-10,For engineering students who want to continue with higher studies.
+132,High Achievers Grant,Surma Learning Foundation,3.9,All,no,All,23000,2027-02-19,Rewards consistent academic performance.
+133,Problem Solvers Scholarship,Green Delta Care Fund,3.6,CSE,no,All,21000,2027-01-30,For CSE students who have built a software project or joined a programming contest.
+134,Cultural Excellence Award,Meghna Scholars Society,2.3,All,no,All,28000,2027-03-23,"For students who take part in cultural events such as music, drama or dance."
+135,Helping Civil Engineering Grant,Karnaphuli Alumni Association,2.8,CE,no,All,31000,2027-05-02,For CE students who want to work on flood and cyclone resilient buildings.
+136,Academic Excellence Award,Chattogram Business Forum,3.7,All,no,All,33000,2027-10-02,For students who improved their CGPA every semester.
